@@ -1,12 +1,13 @@
 #-*- encoding: utf-8 -*-
 import imapclient
 import email 
+import smtplib
 class myEmail:
     __loginEmail='454063072@qq.com'
     __loginPassword='jolzhtvvtkykcaih'
     __smtp=None
-    __smtphost=''
-    __smtpport=''
+    __smtphost='smtp.qq.com'
+    __smtpport='465'
     __imap=None
     __imaphost='imap.qq.com'
     __imapport='993' 
