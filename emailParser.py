@@ -110,7 +110,7 @@ def trackProblemSolution(result,text):
     else:
         #找不到编号
         result.append('Error')
-        result.append('找不到问题编号')
+        result.append('找不到命令或问题编号')
         return result    
     result.append('Track')
     result.append(id)
