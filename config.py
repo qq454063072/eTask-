@@ -1,14 +1,15 @@
-from enum import Enum
+import re
+whiteList=(
+    '454063072@qq.com',
+    'chenminghao7@jd.com'
+)
 
-class DangerLv(Enum):
-    LOW='低'
-    MIDDLE='中'
-    HIGH='高'
+class CommandList():
+    newProblem='创建问题'
+    updateProblem='修改问题'
+    finishProblem='结束问题'
+    trackProblem='问题编号(.+?)'
 
-class DangerType(Enum):
-    FUNCTION='功能问题'
-    PERFORMANCE='性能问题'
-    SECURITY='安全问题'
-    USEREXP='用户体验'
-
-KEYWORDS=('1','2','3')
+newTemplate='【产品名称\*】(.+?)【问题类型】(.+?)【严重程度】(.+?)【反馈人\*】(.+?)【联系方式\*】(.+?)【备注】(.+?)【问题描述\*】(.+?)--end--'
+updateTemplate=''
+finTemplate=''    
