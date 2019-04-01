@@ -11,3 +11,4 @@ class DangerType(Enum):
     SECURITY='安全问题'
     USEREXP='用户体验'
 
+KEYWORDS=('1','2','3')
