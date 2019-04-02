@@ -1,7 +1,6 @@
 import re
 whiteList=(
-    '454063072@qq.com',
-    'chenminghao7@jd.com'
+
 )
 
 class CommandList():
