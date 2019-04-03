@@ -44,6 +44,4 @@ class myEmail:
         msg['From']=email.utils.formataddr([self.__sendName,self.__loginEmail])
         msg['to']=email.utils.formataddr(['User',receiver])
         self.__smtp.sendmail(self.__loginEmail,[receiver],msg.as_string())
-    
-
-    
+        
