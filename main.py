@@ -1,16 +1,16 @@
-#-*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 from emailController import myEmail
 import emailParser
 import dbController
-import email
 
-db=dbController.MyDataBase()
-mail=myEmail()
+db = dbController.MyDataBase()
+mail = myEmail()
 mail.imapConnect()
-mailList=mail.getUnseen()
+mailList = mail.getUnseen()
 for eachmail in mailList:
-    tempdata=emailParser.parseEmail(eachmail)
+    tempdata = emailParser.parseEmail(eachmail)
     print(tempdata)
-    db.storeInDb(tempdata)
-# mail.smtpConnect()
-# msg=emailParser.makeMsg()
+    stroeResult = db.storeInDb(tempdata)
+    mail.smtpConnect()
+    msg = emailParser.makeMsg(stroeResult)
+    mail.sendTo(msg)
