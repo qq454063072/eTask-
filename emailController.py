@@ -7,7 +7,7 @@ import smtplib
 class myEmail:
     __sendName = 'eTask'
     __loginEmail = ''
-    __loginPassword = 'jolzhtvvtkykcaih'
+    __loginPassword = ''
     __smtp = None
     __smtphost = 'smtp.qq.com'
     __smtpport = '465'
